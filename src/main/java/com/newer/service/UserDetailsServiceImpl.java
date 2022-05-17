@@ -27,7 +27,7 @@ private UserMapper userMapper;
     private PermissionMapper permissionMapper;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println();
+        System.out.println("hello");
         UserInfo userInfo = userMapper.selectByName(username);
         System.out.println("usernameusername"+username);
         if(userInfo!=null){

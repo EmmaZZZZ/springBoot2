@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+</head>
+<body>
+<h3>Home Page</h3>
+<p>显示登录用户名：</p>
+<span sec:authentication="name"></span>
+
+<p>显示当前用户所有权限：</p>
+方式1： <span sec:authentication="principal.authorities"></span><br/>
+方式2： <span sec:authentication="authorities"></span>
+
+<div sec:authorize="hasRole('ADMIN')">
+  <h3>我的VIP角色</h3>
+  <ul>
+    <li><a th:href="@{/user/query}">用户查询</a></li>
+    <li><a th:href="@{/user/add}">用户添加</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

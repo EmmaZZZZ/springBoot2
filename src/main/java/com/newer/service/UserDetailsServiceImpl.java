@@ -28,6 +28,7 @@ private UserMapper userMapper;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         System.out.println("github");
+        System.out.println("github2TestMikey");
         UserInfo userInfo = userMapper.selectByName(username);
         System.out.println("usernameusername"+username);
         if(userInfo!=null){

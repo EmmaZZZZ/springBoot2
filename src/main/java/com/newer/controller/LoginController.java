@@ -11,7 +11,7 @@ public class LoginController {
 
     @RequestMapping({"/", "/home", "/index"})
     public String index() {
-        log.info("进入首页");
+        log.info("qwww");
         return "index";
     }
 

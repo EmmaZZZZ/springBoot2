@@ -11,6 +11,7 @@ public class HelloController {
     }
     @GetMapping("/admin")
     public String admin(){
+        System.out.println("新的");
         return "hello admin!";
     }
 }
